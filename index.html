@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Smart Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="themeToggle">🌙 Dark Mode</button> <!-- Dark Mode Toggle -->
+    <h1>Smart Budget Tracker</h1>
+    <div class="auth-form">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button id="loginBtn">Login</button>
+      <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+    </div>
+
+    <div class="auth-form" id="registerForm" style="display: none;">
+      <h2>Register</h2>
+      <input type="text" id="registerUsername" placeholder="Username">
+      <input type="password" id="registerPassword" placeholder="Password">
+      <button id="registerBtn">Register</button>
+      <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+
+    // Load dark mode state from localStorage
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+      themeToggle.textContent = '☀️ Light Mode';
+    } else {
+      document.body.classList.remove('dark-mode');
+      themeToggle.textContent = '🌙 Dark Mode';
+    }
+
+    // Toggle Dark Mode
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDarkMode);
+      themeToggle.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
+  <script src="auth.js"></script>
+</body>
+</html>

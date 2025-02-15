@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode .container {
+    background: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .balance {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .balance h2 {
+    font-size: 1.5rem;
+  }
+  
+  #balance {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ecc71;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form input, .form select, .form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  body.dark-mode .form input,
+  body.dark-mode .form select,
+  body.dark-mode .form button {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+  }
+  
+  .form button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form button:hover {
+    background-color: #27ae60;
+  }
+  
+  .transactions {
+    margin-bottom: 20px;
+  }
+  
+  .transactions h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #transactionList {
+    list-style: none;
+  }
+  
+  #transactionList li {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  body.dark-mode #transactionList li {
+    background: #333;
+    border-color: #444;
+    color: #fff;
+  }
+  
+  #transactionList li.income {
+    border-left: 5px solid #2ecc71;
+  }
+  
+  #transactionList li.expense {
+    border-left: 5px solid #e74c3c;
+  }
+  
+  .chart {
+    margin-top: 20px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  button {
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .auth-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .auth-form button {
+    padding: 10px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-form button:hover {
+    background-color: #27ae60;
+  }
+  
+  .auth-form p {
+    text-align: center;
+  }
+  
+  .auth-form a {
+    color: #2ecc71;
+    text-decoration: none;
+  }
+  
+  .auth-form a:hover {
+    text-decoration: underline;
+  }
